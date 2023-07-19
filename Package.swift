@@ -23,7 +23,17 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FileBrowser",
-            dependencies: [],
+            dependencies: [
+        .process("./documents@2x.png"),
+        .process("./files@2x.png"),
+        .process("./FileBrowser.xib"),
+        .process("./folder@2x.png"),
+        .process("./image@2x.png"),
+        .process("./pdf@2x.png"),
+        .process("./zip@2x.png"),
+        .process("./PreviewTransitionViewController.xib"),
+        .process("./WebviewPreviewViewContoller.xib"),
+        ],
             path: "FileBrowser",
             exclude:[]
             ),
