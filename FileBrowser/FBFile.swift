@@ -6,7 +6,7 @@
 //  Copyright © 2016 Roy Marmelstein. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// FBFile is a class representing a file in FileBrowser
 @objc open class FBFile: NSObject {
