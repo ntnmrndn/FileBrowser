@@ -26,15 +26,15 @@ let package = Package(
       path: "FileBrowser",
       exclude: ["examples", "FileBrowserTests", "build.sh", "FileBrowser.podspec"],
       resources: [
-        .copy("./documents@2x.png"),
-        .copy("./files@2x.png"),
-        .copy("./FileBrowser.xib"),
-        .copy("./folder@2x.png"),
-        .copy("./image@2x.png"),
-        .copy("./pdf@2x.png"),
-        .copy("./zip@2x.png"),
-        .copy("./PreviewTransitionViewController.xib"),
-        .copy("./WebviewPreviewViewContoller.xib")
+        .process("./documents@2x.png"),
+        .process("./files@2x.png"),
+        .process("./FileBrowser.xib"),
+        .process("./folder@2x.png"),
+        .process("./image@2x.png"),
+        .process("./pdf@2x.png"),
+        .process("./zip@2x.png"),
+        .process("./PreviewTransitionViewController.xib"),
+        .process("./WebviewPreviewViewContoller.xib")
       ]
     )
   ],
