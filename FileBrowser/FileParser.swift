@@ -39,7 +39,7 @@ class FileParser {
         var filePaths = [URL]()
         // Get contents
         do  {
-            filePaths = try self.fileManager.contentsOfDirectory(at: directoryPath, includingPropertiesForKeys: [], options: [.skipsHiddenFiles])
+          filePaths = try self.fileManager.contentsOfDirectory(at: directoryPath, includingPropertiesForKeys: [], options: [])
         } catch {
             return files
         }
@@ -52,7 +52,7 @@ class FileParser {
             if let excludesFilepaths = excludesFilepaths , excludesFilepaths.contains(file.filePath) {
                 continue
             }
-            if file.displayName.isEmpty == false {
+          if file.displayName.isEmpty == false, file.displayName != ".", file.displayName != ".." {
                 files.append(file)
             }
         }
