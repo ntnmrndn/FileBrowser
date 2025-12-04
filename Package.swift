@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "FileBrowser",
   platforms: [
-    .iOS(.v14)
+    .iOS(.v17)
   ],
   products: [
     // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -24,19 +24,19 @@ let package = Package(
     .target(
       name: "FileBrowser",
       path: "FileBrowser",
-      exclude: ["examples", "FileBrowserTests", "build.sh", "FileBrowser.podspec"],
+      exclude: ["Info.plist"],
       resources: [
-        .process("./documents@2x.png"),
-        .process("./files@2x.png"),
-        .process("./FileBrowser.xib"),
-        .process("./folder@2x.png"),
-        .process("./image@2x.png"),
-        .process("./pdf@2x.png"),
-        .process("./zip@2x.png"),
-        .process("./PreviewTransitionViewController.xib"),
-        .process("./WebviewPreviewViewContoller.xib")
+        .process("Resources/documents@2x.png"),
+        .process("Resources/file@2x.png"),
+        .process("Resources/FileBrowser.xib"),
+        .process("Resources/folder@2x.png"),
+        .process("Resources/image@2x.png"),
+        .process("Resources/pdf@2x.png"),
+        .process("Resources/zip@2x.png"),
+        .process("Resources/PreviewTransitionViewController.xib"),
+        .process("Resources/WebviewPreviewViewContoller.xib")
       ]
     )
   ],
-  swiftLanguageVersions: [.v5]
+  swiftLanguageModes: [.v5]
 )
